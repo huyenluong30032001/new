@@ -1,0 +1,76 @@
+/* ===== từ <style> trong <head> (giữ nguyên nội dung) ===== */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+/* Text Selection Color */
+::selection {
+  background: #d14424;
+  color: #fff;
+}
+::-moz-selection {
+  background: #d14424;
+  color: #fff;
+}
+
+/* Reset apple form styles */
+input, textarea, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; border-radius: 0;
+  background-image: none;
+}
+
+/* ===== từ .styles__global-embed-code w-embed (giữ nguyên) ===== */
+a {
+  text-underline-position: under;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.05em;
+}
+.w-richtext>:first-child {
+  margin-top: 0;
+}
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== từ .w-embed (giữ nguyên) ===== */
+.swiper-slide-thumb-active .swiper-slider_details-collapse {
+  display: block;
+}
+
+/* Khoảng cách giữa các block (tùy thích) */
+.how-block + .how-block {
+  margin-top: 4rem;
+}
+
+/* ---- Remove phone mockup look & keep only the image ---- */
+.phone-mock,
+.phone-screen_wrapper,
+.phone-screen {
+  all: unset;                /* gỡ hết style Webflow */
+  display: block !important; /* biến thành block bình thường */
+  width: 100% !important;
+}
+
+.phone-mock_tab,
+.phone-mock_border {
+  display: none !important;  /* ẩn các lớp tạo viền/mockup */
+}
+
+.phone-screen_img,
+.phone-screen_img-2 {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  border-radius: 12px;       /* tuỳ thích, có thể bỏ */
+  box-shadow: none !important;
+}
+
+/* đảm bảo slide không còn layout lạ từ mockup */
+.cc-how-slider .swiper-slide {
+  display: block !important;
+}
