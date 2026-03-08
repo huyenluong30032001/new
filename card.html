@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Influencer Card Stack</title>
+  <link rel="stylesheet" href="card.css" />
+</head>
+<body>
+  <main class="stage">
+    <h1 class="title">let’s Design<br><span>Influencer Card</span></h1>
+
+    <section class="stack" aria-label="Influencer cards">
+      <!-- Big soft blur panel behind the cards -->
+      <div class="bgpanel" aria-hidden="true">
+        <div class="bgpanel__layer bgpanel__a"></div>
+        <div class="bgpanel__layer bgpanel__b"></div>
+      </div>
+
+      <!-- Blurred “behind” cards -->
+      <div class="behind" aria-hidden="true">
+        <div class="card ghost ghost-1"></div>
+        <div class="card ghost ghost-2"></div>
+        <div class="card ghost ghost-3"></div>
+      </div>
+
+      <!-- Active card -->
+      <article class="card active" id="activeCard">
+        <div class="card__bg"></div>
+
+        <div class="card__top">
+          <div class="card__name" id="name">—</div>
+          <div class="card__role" id="role">—</div>
+        </div>
+
+        <div class="card__bottom">
+          <div class="card__meta" id="followers">—</div>
+          <button class="card__cta" type="button">Follow</button>
+        </div>
+      </article>
+
+      <!-- Glass arrows -->
+      <button class="nav nav--left" id="prev" aria-label="Previous">
+        <span class="nav__icon">‹</span>
+      </button>
+      <button class="nav nav--right" id="next" aria-label="Next">
+        <span class="nav__icon">›</span>
+      </button>
+    </section>
+  </main>
+
+  <script src="card.js"></script>
+</body>
+</html>
